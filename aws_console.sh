@@ -47,6 +47,7 @@ echo click in this url: http://$instanceIP:8069/
 echo "-------------------------------------------------------"
 echo "--------5. Conection with instance AWS with FTP-----"
 echo "-------------------------------------------------------"
+chmod 400 aws_personal.pem
 sftp -i "$public_key.pem" ubuntu@$instanceDns
 echo "-------------------------------------------------------"
 echo "--------6. Conection with instance AWS with SSH--------"
