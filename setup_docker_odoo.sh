@@ -33,7 +33,7 @@ sudo systemctl status docker
 echo "---------------------------------------------------------------------------------"
 echo "-----------------------Descarga del Docker Odoo----------------------------------"
 echo "---------------------------------------------------------------------------------"
-docker pull odoo:15.0
+docker pull odoo:latest
 echo "---------------------------------------------------------------------------------"
 echo "-----------------------Descarga del Docker de Base de Datos: Postgres------------"
 echo "---------------------------------------------------------------------------------"
@@ -50,4 +50,4 @@ docker run -d -v odoo-db:/var/lib/postgresql/data --restart always -e POSTGRES_U
 echo "---------------------------------------------------------------------------------"
 echo "-----------------------Ejecucion del Docker:Odoo---------------------------------"
 echo "---------------------------------------------------------------------------------"
-docker run -v odoo-data:/var/lib/odoo --restart always -d -p 8069:8069 --name odoo --link db:db -t odoo:15.0
+docker run -v odoo-data:/var/lib/odoo --restart always -d -p 8069:8069 --name odoo --link db:db -t odoo:latest
